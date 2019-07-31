@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.oliveira.javamongo.domain.User;
 import com.oliveira.javamongo.repository.UserRepository;
 import com.oliveira.javamongo.services.exception.ObjectNotFoundException;
+import com.oliveira.javamongo.userdto.UserDTO;
 
 @Service
 public class UserService {
@@ -24,5 +25,13 @@ public class UserService {
 		Optional<User> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
 		
+	}
+	
+	public User insert(User obj) {
+		return repo.insert(obj);
+	}
+	
+	public User fromDTO(UserDTO objDto) {
+		return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
 	}
 }
