@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.oliveira.javamongo.domain.User;
+import com.oliveira.javamongo.dto.UserDTO;
 import com.oliveira.javamongo.services.UserService;
-import com.oliveira.javamongo.userdto.UserDTO;
 
 @RestController
 @RequestMapping(value="/users")

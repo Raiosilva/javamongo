@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.oliveira.javamongo.domain.User;
+import com.oliveira.javamongo.dto.UserDTO;
 import com.oliveira.javamongo.repository.UserRepository;
 import com.oliveira.javamongo.services.exception.ObjectNotFoundException;
-import com.oliveira.javamongo.userdto.UserDTO;
 
 @Service
 public class UserService {
